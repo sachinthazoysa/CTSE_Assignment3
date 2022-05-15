@@ -32,23 +32,23 @@ jobs:
                 push: true
                 tags: ${{ secrets.DOCKER_HUB_USERNAME }}/usermanagement:v3
                 
-#             -
-#               uses: actions-hub/kubectl@master
-#               env:
-#                 KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-#               with:
-#                 args: get pods
+            -
+              uses: actions-hub/kubectl@master
+              env:
+                KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+              with:
+                args: get pods
                 
                 
-#             -
-#               name: deploy to cluster
-#               uses: wahyd4/kubectl-helm-action@master
-#               env:
-#                 KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG }}
-#               with:
-#                 args: |
-#                   kubectl delete deployment.apps/user-management
-#                   kubectl apply -f deploy.yaml
+            -
+              name: deploy to cluster
+              uses: wahyd4/kubectl-helm-action@master
+              env:
+                KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG }}
+              with:
+                args: |
+                  kubectl delete deployment.apps/user-management
+                  kubectl apply -f deploy.yaml
               
             
 
