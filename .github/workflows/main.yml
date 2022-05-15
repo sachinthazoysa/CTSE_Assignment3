@@ -32,11 +32,6 @@ jobs:
                 push: true
                 tags: ${{ secrets.DOCKER_HUB_USERNAME }}/usermanagement:latest
                 
-            - 
-              name: Kuberentes (k8s) cli - kubectl
-              uses: actions-hub/kubectl@v1.21.2
-      
-            
             -
               uses: actions-hub/kubectl@master
               env:
