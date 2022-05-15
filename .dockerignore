@@ -2,3 +2,5 @@
 Dockerfile
 .dockerignore
 docker-compose.yaml
+deploy.yaml
+service.yaml
