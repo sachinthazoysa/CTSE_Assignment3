@@ -30,7 +30,7 @@ jobs:
                 context: .
                 file: ./Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/usermanagement:latest
+                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/usermanagement:v3
                 
             -
               uses: actions-hub/kubectl@master
