@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 dotenv.config();
 
 app.get('/', (req, res) => {
-    res.send("User Management Test");
+    res.send("User Management");
 })
 
 app.use('/users', userAPI());
