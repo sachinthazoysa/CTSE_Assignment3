@@ -25,7 +25,7 @@ spec:
         app: user-management
     spec:
       containers:
-      - image: sachinthadezoysa/usermanagement:v3
+      - image: sachinthadezoysa/usermanagement:v4
         imagePullPolicy: IfNotPresent
         name: user-management
         ports:
