@@ -61,7 +61,8 @@ const userValidation = async (req, res) => {
     if (req.body) {
        await User.find({ email: req.body.email, password: req.body.password})
            .then(data => {
-               if(data.length!=0){
+               console.log(req.body)
+                if(data.length!=0){
                    res.status(200).send("TRUE")
                } else {
                    res.status(200).send("FALSE")
