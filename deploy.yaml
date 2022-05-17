@@ -26,7 +26,6 @@ spec:
     spec:
       containers:
       - image: sachinthadezoysa/user-service:latest
-        imagePullPolicy: IfNotPresent
         name: user-management
         ports:
         - containerPort: 3000
