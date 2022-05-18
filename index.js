@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 dotenv.config();
 
 app.get('/', (req, res) => {
-    res.send("<h1>User Management service</h1>");
+    res.send("<h1 style={text-align:center;}>User Management service</h1>");
 })
 
 app.use('/users', userAPI());
